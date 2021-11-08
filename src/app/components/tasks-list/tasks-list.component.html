@@ -1,0 +1,13 @@
+<section>
+    <div class="container">
+        <div *ngFor="let task of tasks let i=index" class="alert alert-primary d-flex justify-content-between" role="alert">
+            {{task}}
+
+            <div>
+                <i class="fas fa-check-square text-success" (click)="doneTask($event)"></i>   
+                <i class="fas fa-trash-alt text-danger" (click)="deleteTask(i)"></i>
+            </div>
+            
+        </div>    
+    </div>
+</section>
